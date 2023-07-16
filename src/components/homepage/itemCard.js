@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/styles/home.module.css";
 import Image from "next/image";
-import dummy from "../../../public/icon/commingSoonPage.webp";
+import dummy from "../../../public/icon/imgNotFound.png";
 import energy from "../../../public/icon/energy.svg";
 import time from "../../../public/icon/time.svg";
 import like from "../../../public/icon/like.svg";
@@ -18,7 +18,7 @@ const ItemCard = ({ data }) => {
                 <span>POPULAR</span>
               </div>
             )}
-            <Image src={dummy} width={200} height={250} alt="item" />
+            <Image style={{background:value.images!==""?"inherit":"aliceblue"}} src={value.images!==""?value.images:dummy} width={200} height={250} alt="item" />
           </div>
           <ul className={styles.statusInfo}>
             <li>
@@ -30,7 +30,7 @@ const ItemCard = ({ data }) => {
               <span>SUPER EASY</span>
             </li>
           </ul>
-          <div className={styles.headingSec}>{data?.name}</div>
+          <div className={styles.headingSec}>{value?.name}</div>
         </div>
       ))}
        </>
