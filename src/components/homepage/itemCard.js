@@ -12,7 +12,7 @@ const ItemCard = ({ data }) => {
       {data?.menu_items?.map((value, index)=>(
         <div key={index} className={styles.itemCard}>
           <div className={styles.imgContainer}>
-            {data.position <= 10 && (
+            {value.position <= 10 && (
               <div className={styles.popularSec}>
                 <Image src={energy} width={12} height={12} alt="POPULAR" />
                 <span>POPULAR</span>
