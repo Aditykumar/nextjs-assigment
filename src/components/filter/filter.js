@@ -46,8 +46,8 @@ const Filter = ({ setFilterData, resData }) => {
             <li>
               <p>ALL CATEGORIES</p>
               <div className={styles.checkboxGroup}>
-                {resData?.array?.categorys?.map((value) => (
-                  <label>
+                {resData?.array?.categorys?.map((value,index) => (
+                  <label key={index}>
                     <input
                       name="name"
                       type="radio"

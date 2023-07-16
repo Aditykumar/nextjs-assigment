@@ -38,12 +38,10 @@ const Homepage = ({
         ) : (
           <>
           {/* ---------------all Data------------- */}
-            {resData?.array?.categorys?.map((value) => (
-              <>
-                {value?.menu_items?.map((value, index) => (
+            {resData?.array?.categorys?.map((value,index) => (
+                // {value?.menu_items?.map((value, index) => (
                   <ItemCard key={index} data={value} />
-                ))}
-              </>
+                // ))}
             ))}
           {/* ---------------all Data------------- */}
 
