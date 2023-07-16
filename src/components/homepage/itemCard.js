@@ -43,7 +43,7 @@ const ItemCard = ({ data }) => {
                 <span>POPULAR</span>
               </div>
             )}
-            <Image src={dummy} width={200} height={250} alt="item" />
+            <Image style={{background:data.images!==""?"inherit":"aliceblue"}} src={data.images!==""?data.images:dummy} width={200} height={250} alt="item" />
           </div>
           <ul className={styles.statusInfo}>
             <li>
