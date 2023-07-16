@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import commingSoonPage from "../../public/icon/commingSoonPage.webp";
+import comingSoonPage from "../../public/icon/commingSoonPage.webp";
 import Link from "next/link";
 const CommingSoonPage = () => {
   return (
     <div className="commingSoon">
       <Image
-        src={commingSoonPage}
+        src={comingSoonPage}
         width="100%"
         height="100%"
         alt="commingSoonImage"

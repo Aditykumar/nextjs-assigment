@@ -1,4 +1,4 @@
-import CommingSoonPage from '@/components/commingSoonPage'
+import CommingSoonPage from '@/components/comingSoonPage'
 import Header from '@/components/header/header'
 import React from 'react'
 
