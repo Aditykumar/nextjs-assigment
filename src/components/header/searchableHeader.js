@@ -52,8 +52,8 @@ const SearchableHeader = ({ resData, setSearchfilterdata ,searchfilterdata}) => 
                 onChange={handleChange}
               >
                 <option value={""}>------SELECT------</option>
-                {resData?.array?.categorys?.map((value) => (
-                  <option value={value.name}>{value.name}</option>
+                {resData?.array?.categorys?.map((value,index) => (
+                  <option key={index} value={value.name}>{value.name}</option>
                 ))}
               </select>
               <input
