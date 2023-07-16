@@ -1,0 +1,127 @@
+    /* ------------------filter------------- */
+    .filterSec {
+        position: sticky;
+        top: 80px;
+        margin-bottom: 20px;
+    }
+
+    .filterSec .headingContainer p {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .filterSec .headingContainer span {
+        line-height: 1.5;
+    }
+
+    .filterOptContainer {
+        margin-top: 20px;
+        list-style: none;
+    }
+
+    .filterOptContainer li p {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 10px;
+
+    }
+
+    .filterOptContainer li {
+        font-size: 14px;
+        margin-bottom: 15px;
+
+    }
+
+    .filterOptContainer li .checkboxGroup {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .filterOptContainer li .checkboxGroup input {
+        margin-right: 10px;
+    }
+
+    .filterSec .filterSearchGroup {
+        display: flex;
+
+    }
+
+    .filterSec .filterSearchGroup .inputGroup {
+        width: 100%;
+        padding: 3px;
+        border: 1px solid var(--grayColor);
+        border-right: none;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        height: 40px;
+    }
+
+    .filterSec .filterSearchGroup .inputGroup input {
+        outline: none;
+        border: none;
+        width: 100%;
+        padding: 10px;
+        height: 100%;
+    }
+
+    .filterSec .filterSearchGroup button {
+        width: 40px;
+        height: 40px;
+        background-color: var(--darkColor);
+        border: none;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .filterLogo {
+        display: none;
+    }
+
+    /* ------------------filter------------- */
+
+
+    /* ------------------media query (start)------------- */
+
+    @media (max-width: 992px) {
+        .filterSec {
+            visibility: hidden;
+            height: 0;
+            width: 0;
+            position: absolute;
+            z-index: 1;
+            background-color: var(--whiteColor);
+            transition: all .3s ease-in-out;
+            right: 0;
+            overflow: auto;
+            top: 20px;
+            padding: 10px;
+            border: 1px solid var(--darkColor);
+            border-radius: 4px;
+            opacity: 0;
+        }
+
+        .filterSec.show {
+            visibility: visible;
+            height: 200px;
+            width: 300px;
+            top: 40px;
+            opacity: 1;
+            
+        }
+
+        .filterLogo {
+            display: block;
+            padding: 10px 20px;
+            background-color: var(--yellowColor);
+            border-radius: 4px;
+            position: sticky;
+            top: 0;
+        }
+    }
+    /* ------------------media query (end)------------- */

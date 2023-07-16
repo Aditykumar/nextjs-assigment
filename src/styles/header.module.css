@@ -1,0 +1,335 @@
+/* ----------------Top Header Section (start)-------------  */
+.topHeader,
+.headerMenu {
+    background: var(--darkColor);
+    color: var(--whiteColor);
+}
+
+.topHeader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.headerInnerSection {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topHeader .headerInnerSection .moblileLoginIcoc {
+    display: none;
+}
+
+.headerInnerSection ul {
+    display: flex;
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.headerInnerSection ul li {
+    margin-right: 30px;
+}
+
+.headerInnerSection ul li .active {
+    /* color: red;&#9733; */
+    position: relative;
+}
+
+.headerInnerSection ul li .active::after {
+    content: "\2605 ";
+    position: absolute;
+    top: -13px;
+    right: -13px;
+    color: var(--yellowColor);
+
+
+}
+
+.headerInnerSection ul li:last-child {
+    margin-right: 0;
+}
+
+.headerInnerSection ul li a {
+    opacity: 1;
+}
+
+.headerInnerSection ul li a:hover {
+    opacity: .8;
+}
+
+/* ----------------Top Header Section (end)-------------  */
+
+
+/* ----------------search Header Section (start)-------------  */
+.searchableHeader {
+    margin-top: 50px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchableHeader .easyMealsLogo {
+    display: block;
+    margin-right: 100px;
+    width: fit-content;
+}
+
+.searchableHeader .easyMealsLogo p {
+    font-size: 22px;
+}
+
+.searchableHeader .easyMealsLogo p:first-child {
+    font-family: 'Fasthand', cursive;
+    font-style: italic;
+    font-size: 14px;
+    text-align: end;
+}
+
+.searchableHeader .SearchGroup {
+    width: 500px;
+    display: flex;
+}
+
+.searchableHeader .SearchGroup button {
+    width: 40px;
+    height: 40px;
+    background-color: var(--yellowColor);
+    border: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchableHeader .headerRightSec {
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchableHeader .headerRightSec .cartSection {
+    display: flex;
+    align-items: center;
+}
+
+.searchableHeader .headerRightSec .cartSection a {
+    margin-left: 20px;
+}
+
+.searchableHeader .headerRightSec .cartSection a:first-child {
+    padding-right: 20px;
+    border-right: 1px solid var(--grayColor);
+}
+
+.SocialMediaIcon a {
+    margin-left: 10px;
+}
+
+.searchableHeader .SearchGroup .inputGroup {
+    width: 100%;
+    display: flex;
+    padding: 3px;
+    border: 1px solid var(--grayColor);
+    border-right: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    height: 40px;
+}
+
+.searchableHeader .SearchGroup .inputGroup input {
+    outline: none;
+    border: none;
+    height: 100%;
+    width: calc(100% - 170px);
+}
+
+.searchableHeader .SearchGroup .inputGroup .categoriesGroup {
+    border: none;
+    outline: none;
+    width: 170px;
+    background-color: var(--lightgrayColor);
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    padding-right: 20px;
+    padding-left: 4px;
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.searchableHeader .SearchGroup .inputGroup .categoriesGroup::after {
+    content: '';
+    top: 9px;
+    right: 5px;
+    position: absolute;
+    height: 7px;
+    width: 7px;
+    border: 2px solid var(--grayColor);
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+}
+
+.headerMenu {
+    background: var(--whiteColor);
+    color: var(--darkColor);
+}
+
+.headerMenu .headerInnerSection {
+    border: 1px solid var(--grayColor);
+    border-left: none;
+    border-right: none;
+}
+
+/* ----------------search Header Section (end)-------------  */
+
+@media (max-width: 992px) {
+    .searchableHeader {
+        align-items: flex-start;
+    }
+
+    .searchableHeader .headerRightSec {
+        flex-direction: column;
+        align-items: flex-end;
+        width: calc(100% - 230px);
+    }
+
+    .searchableHeader .headerRightSec .cartSection {
+        margin-top: 10px;
+    }
+}
+
+/* ----------------common media query Section (start)-------------  */
+
+@media (max-width: 767px) {
+    .searchableHeader .SearchGroup .inputGroup .categoriesGroup {
+        display: none;
+    }
+
+    .searchableHeader .SearchGroup .inputGroup input {
+        width: 100%;
+    }
+
+    .searchableHeader .headerRightSec .cartSection {
+        margin-top: 0;
+    }
+
+    .searchableHeader .headerRightSec .cartSection a span {
+        display: none;
+    }
+
+    .searchableHeader .headerRightSec .cartSection a {
+        padding-right: 10px !important;
+        margin-right: 10px;
+    }
+
+    .searchableHeader .headerRightSec .cartSection a:last-child {
+        margin-left: 0;
+    }
+
+    .searchableHeader .headerRightSec .cartSection:first-child {
+        margin-left: 10px;
+    }
+
+    .headerInnerSection {
+        flex-direction: column;
+    }
+
+    .headerMenu .headerInnerSection ul:last-child {
+        justify-content: flex-end;
+        margin-top: 15px;
+    }
+
+    .headerMenu .headerInnerSection ul:first-child {
+        justify-content: space-between;
+        overflow: auto;
+        padding: 10px 0;
+    }
+
+    .topHeader .headerInnerSection {
+        position: relative;
+    }
+
+    .topHeader .headerInnerSection .moblileLoginIcoc {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+
+    .searchableHeader {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .searchableHeader .headerRightSec {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .searchableHeader .headerRightSec {
+        align-items: center;
+    }
+
+    .searchableHeader .SearchGroup {
+        width: calc(100% - 70px);
+    }
+
+    .topHeader .headerInnerSection ul {
+        overflow: auto;
+        padding: 10px 0;
+        width: calc(100% - 50px);
+    }
+
+    .topHeader .headerInnerSection ul li a {
+        display: block;
+        width: max-content;
+    }
+
+    .topHeader .headerInnerSection .logInSec {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 25px;
+        background: var(--darkColor);
+        right: 20px;
+        border-radius: 4px;
+        padding: 10px;
+        transition: all .3s ease-in-out;
+    }
+
+    .topHeader .headerInnerSection .logInSec.show {
+        visibility: visible;
+        height: 100px;
+        width: 200px;
+        top: 55px;
+
+
+    }
+
+    .topHeader .headerInnerSection .logInSec.show li {
+        margin-bottom: 10px;
+
+    }
+
+    .easyMealsLogo {
+        margin-right: 0 !important;
+        margin-bottom: 20px;
+    }
+
+    .headerMenu .headerInnerSection ul:last-child {
+        display: none;
+    }
+}
+/* ----------------common media query Section (end)-------------  */

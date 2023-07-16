@@ -1,0 +1,117 @@
+.hompage {
+    display: flex;
+    margin-top: 60px;
+}
+
+.hompage .leftSec {
+    width: 240px;
+    margin-right: 40px;
+}
+
+.hompage .rightSec {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: calc(100% - 280px);
+}
+
+.itemCard {
+    width: calc(25% - 15px)
+}
+
+.itemCard .imgContainer {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.itemCard .imgContainer img {
+    width: 100%;
+}
+
+.itemCard .imgContainer .popularSec {
+    padding: 3px 5px;
+    background-color: var(--yellowColor);
+    width: fit-content;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.itemCard .statusInfo {
+    display: flex;
+    list-style: none;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.itemCard .statusInfo li {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.itemCard .statusInfo li img {
+    margin-right: 3px;
+}
+
+.itemCard .statusInfo li:last-child {
+    margin-right: 0;
+}
+
+.itemCard .headingSec {
+    font-weight: 500;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------- common media query Section (start)-------------  */
+
+
+@media (max-width: 992px) {
+    .itemCard {
+        width: calc(50% - 10px);
+    }
+
+    .hompage {
+        margin-top: 20px;
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hompage .rightSec {
+        width: 100%;
+    }
+
+    .hompage .leftSec {
+        width: fit-content;
+        margin-right: 0;
+        margin-bottom: 20px;
+        position: relative;
+    }
+}
+/* ----------------common media query Section (end)-------------  */

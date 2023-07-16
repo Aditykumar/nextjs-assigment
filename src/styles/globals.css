@@ -1,0 +1,173 @@
+:root {
+
+/* ---------------- global color (start)-------------  */
+
+  --darkColor: #0c0231;
+  --whiteColor: #ffffff;
+  --grayColor: #c5c5c5;
+  --lightgrayColor: #f0f0f0;
+  --yellowColor: #ffe867;
+/* ---------------- global color (end)-------------  */
+
+
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  display: block;
+  color: var(--darkColor);
+  background: var(--whiteColor);
+  font-size: 16px;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* container class for body inner container */
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* ---------------- media query for container Section (start)-------------  */
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .container {
+    max-width: 1260px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+/* ---------------- media query for container Section (end)-------------  */
+
+
+
+
+/* ------------404  page sec (start)--------------- */
+
+.pageNotFoundPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.pageNotFoundPage a {
+  font-weight: bold;
+  text-decoration: underline;
+
+}
+/* ------------404  page sec (end)--------------- */
+
+
+/* ------------comming soon page sec (start)--------------- */
+
+.commingSoon {
+  display: flex;
+  row-gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 187px);
+  width: 100%;
+  overflow: hidden;
+}
+
+.commingSoon .commingSoonImage {
+  position: absolute;
+  height: calc(100% - 187px);
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.commingSoon h2 {
+  font-size: 60px;
+  color: var(--whiteColor);
+  font-weight: 600;
+  text-align: center;
+  z-index: 2;
+}
+
+.commingSoon p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--whiteColor);
+  max-width: 550px;
+  text-align: center;
+  z-index: 2;
+}
+
+.commingSoon a {
+
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--whiteColor);
+  z-index: 2;
+  padding: 16px 32px;
+  border: 1px solid var(--whiteColor);
+  background-color: transparent;
+  border-radius: 4px;
+  transition: all .53s ease-in-out;
+}
+
+.commingSoon a:hover {
+
+  color: var(--yellowColor);
+  border: 1px solid var(--yellowColor);
+
+}
+/* ------------comming soon page sec (end)--------------- */
+
+/* ----------------common media query Section (start)-------------  */
+
+@media screen and (max-width: 480px) {
+  .commingSoon h2 {
+    font-size: 50px;
+  }
+}
+/* ----------------common media query Section (end)-------------  */
